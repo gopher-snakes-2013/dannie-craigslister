@@ -1,8 +1,3 @@
 <h1>you just created this bad boy post:</h1>
 
-<ul>
-  <li>Title: <%= @post.title %> </li>
-  <li>Content: <%= @post.content %></li>
-</ul>
-
-<%= link_to 'Back', category_posts_path %>
+<%= render 'show_post' %>

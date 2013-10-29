@@ -1,0 +1,19 @@
+<h1>add an item:</h1>
+
+<%= form_for :post, url: category_posts_path do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
+<%= link_to 'All Categories', '/' %>
+<%= link_to 'Back', category_posts_path %>

@@ -1,0 +1,16 @@
+<h1>All Items</h1>
+
+
+<%= link_to 'Add Post', new_category_post_path(@category) %>
+<%= link_to 'All Categories', '/' %>
+
+
+<ul>
+  <% @posts.each do |post| %>
+    <li><%= post.title %></li>
+    <li><%= post.content %></li>
+    <%= link_to 'Edit', edit_category_post_path(post.category, post) %>
+    <%= link_to 'Delete', category_post_path(post.category, post), method: :delete, data: { confirm: 'Are you sure?'} %>
+  <% end %>
+</ul>
+

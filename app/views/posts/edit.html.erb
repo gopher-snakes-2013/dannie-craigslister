@@ -1,0 +1,17 @@
+<h1>edit an item:</h1>
+
+<%= form_for :post, url: category_post_path, method: :put do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title, value: @post_to_edit.title %>
+  </p>
+  <p>
+    <%= f.label :content %>
+    <%= f.text_area :content, value: @post_to_edit.content %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
